@@ -1,22 +1,48 @@
 <!--🍔-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hamburger</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Images/ChristmasDog.png">
-</head>
-<body>
-    <div id="header">
-        <h1 id="title">Fallen Dog</h1>
-        <a href="Videos/GULD.mp4">GULD</a>
-        <a href="guld.html">dih</a>
-    </div>
-    <div id="mainbody">
-    <h1>🍔+balls</h1>
-    </div>
-    <h1>DIh</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hamburger</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="hamburger.css">
+        <link rel="icon" href="Images/ChristmasDog.png">
+    </head>
+    <body>
+        <div id="header">
+            <h1>yo</h1>
+            <a href="Videos/GULD.mp4">GULD</a>
+            <a href="guld.html">dih</a>
+        </div>
+        <div id="mainbody">
+            <h1>🍔+balls</h1>
+        </div>
+        <h1>DIh</h1>
+        <!--
+        <p>"in memoriam to the time when i did this but then norway said 'dih'"</p>
+        <code>&lt;a href=&quot;guld.html&quot;&gt;&lt;/a&gt;</code>
+        -->
+        <script>
+            function get_hamburg() {
+                const HAMBURGER = document.createElement('hamburger');
+                const image = document.createElement("img");
+                image.src = "https://tr.rbxcdn.com/180DAY-26fdb4c4ff71991d70876fa8ecadf75b/420/420/Gear/Png/noFilter";
+                image.className = 'hamburger';
+                image.draggable = false;
+                HAMBURGER.appendChild(image);
+                const audio = new Audio('https://www.myinstants.com/media/sounds/hamburger-sound-effect.mp3');
+                audio.volume = 0.25;
+                audio.preservesPitch = false;
+                const r = Math.random() * 0.0625;
+                audio.playbackRate = 1 + (Math.random() > 0.5 ? (-0.5 * r) : r);
+                
+                return [HAMBURGER, audio];
+            };
+            const HAMBURGERS = document.createElement('hamburgers');
+            HAMBURGERS.style.zIndex=-1;
+            document.body.prepend(HAMBURGERS);
+        </script>
+        <script src="hamburger.js"></script>
+    </body>
 </html>

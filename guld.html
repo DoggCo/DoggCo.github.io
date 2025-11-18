@@ -1,11 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <video src="Videos/GULD.mp4" autoplay controls></video>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="hamburger.css">
+        <style>
+            #guld {
+                width: calc(100vw - 2vmin);
+                height: calc(100vh - 2vmin);
+                margin: 1vmin;
+                transition: opacity 1s;
+                display: block;
+                user-select: none;
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <video id="guld" src="Videos/GULD.mp4" draggable="false" loop style="opacity: 0;"></video>
+        <script>
+            const playrackRate = () => {
+                const r = Math.random() * 0.125;
+                return 1 + (Math.random() > 0.5 ? (-0.5 * r) : r);
+            }
+            let main_eminemin = false;
+            let eminem_index = 0;
+            /**@type {(HTMLVideoElement | null)[]}*/
+            let eminems = [];
+            for (let i = 0; i < 32; i++) {
+                eminems.push(null);
+            }
+            const update_eminem_index = () => {
+                for (; eminem_index < eminems.length; eminem_index++) {
+                    if (eminems[eminem_index] === null) {
+                        return true;
+                    }
+                }
+                eminem_index = 0;
+                return false;
+            }
+            /**@type {HTMLVideoElement}*/
+            const guld = document.getElementById('guld');
+            guld.volume = 0.25;
+            const get_hamburg = () => {
+                const NOTHING = [
+                    {
+                        style: {
+                            setProperty: () => {}
+                        },
+                        offsetHeight: null
+                    }, {
+                        addEventListener: () => {},
+                        play: () => {}
+                    }
+                ];
+                if (guld.style.opacity == 0) {
+                    guld.style.opacity = 1;
+                    guld.play();
+                    return NOTHING;
+                }
+                if (! update_eminem_index()) {
+                    return NOTHING;
+                }
+                const HAMBURGER = document.createElement('hamburger');
+                const video = document.createElement("video");
+
+                const INDEX = eminem_index;
+                eminems[INDEX] = video;
+                console.log(`added eminem ${
+                    INDEX
+                }`);
+
+                video.src = "Videos/GULD.mp4";
+                video.className = 'hamburger';
+                video.draggable = false;
+                video.volume = 0.125;
+                video.preservesPitch = false;
+                video.loop = 0;
+                video.playbackRate = playrackRate();
+                const onplay = () => {
+                    guld.pause()
+                    video.removeEventListener('playing', onplay)
+                    const leminems = eminems.filter((em) => em !== null);
+                    leminems.forEach((eminem) => {
+                        if (eminem == null) {}
+                        eminem.pause();
+                        eminem.currentTime = guld.currentTime;
+                    })
+                    leminems.forEach((eminem) => {
+                        eminem.play();
+                    })
+                    guld.play();
+                };
+                video.addEventListener('playing', onplay)
+
+                video.addEventListener('ended', () => {
+                    console.log(`removed eminem ${
+                        INDEX
+                    }`);
+                    const left = HAMBURGER.style.left;
+                    const top = HAMBURGER.style.top;
+                    eminems[INDEX] = null;
+                    HAMBURGER.style.removeProperty('opacity');
+                });
+                HAMBURGER.addEventListener('transitionend', () => {
+                    if (HAMBURGER.style.opacity == 0) {
+                        HAMBURGER.remove();
+                    }
+                });
+                HAMBURGER.appendChild(video);
+                return [HAMBURGER, video];
+            };
+            const HAMBURGERS = document.createElement('hamburgers');
+            document.body.appendChild(HAMBURGERS);
+        </script>
+        <script src="hamburger.js"></script>
+
+    </body>
 </html>
