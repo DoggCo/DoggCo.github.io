@@ -1,4 +1,36 @@
 body {
     background-color: #313131;
+    background-image: url(Images/Stars.png);
+    background-attachment: fixed;
     color: whitesmoke;
+    font-family: Comic Sans MS;
+}
+#header {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: rgba(49, 49, 49, 0.7);
+    border-radius: 20px;
+}
+#header a {
+    display: inline-block;
+    background-color: blueviolet;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 15px;
+    
+}
+#header a:hover {
+    background-color: yellowgreen;
+}
+#mainbody {
+    padding-top: 120px;
 }
