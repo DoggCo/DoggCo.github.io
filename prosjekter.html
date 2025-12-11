@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prosjekter</title>
+  <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="icon" type="image/svg+xml" href="./bilder/logo/favicon.svg">
+</head>
+<body class="projects-page">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Magnus A</a>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Åpne meny">☰</button>
+      <nav id="siteNav" class="site-nav" role="navigation">
+        <ul>
+          <li><a href="om-meg.html"> <span class="lang-no">Om meg</span> <span class="lang-en" style="display:none;">About me</span></a></li>
+          <li><a href="bilder_carusel.html"> <span class="lang-no">Bilder</span> <span class="lang-en" style="display:none;">Pictures</span></a></li>
+          <li><a href="prosjekter.html#" class="active"> <span class="lang-no">Prosjekter</span> <span class="lang-en" style="display:none;">Projects</span></a></li>
+          <li><a href="kontakt.html"> <span class="lang-no">Kontakt</span> <span class="lang-en" style="display:none;">Contact</span></a></li>
+          <li><a href="sosiale.html"> <span class="lang-no">Lenker</span> <span class="lang-en" style="display:none;">Links</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="TranslateAlign">
+        <button id="translateBtn">English</button>
+        </div>
+  </header>
+  
+  <main class="container">
+    <section class="page-header">
+      <h1><span class="lang-no">Prosjekter</span> <span class="lang-en" style="display:none;">Projects</span></h1>
+      <p><span class="lang-no">Velg et tema for å se prosjektene mine innen foto, plakater, film, programmering m.m</span> <span class="lang-en" style="display:none;">Choose a topic to see my projects within photos, posters, film, programming etc.</span></p>
+    </section>
+    
+    <section class="project-menus">
+      <!-- FOTO -->
+      <details class="project-menu">
+        <summary><span class="lang-no">Foto prosjekter</span> <span class="lang-en" style="display:none;">Photo projects</span></summary>
+        <ul>
+          <li>
+            <span class="lang-no"><a href="bilder_carusel.html">Utebilder tatt med telefon.</a></span>
+            <span class="lang-en" style="display:none;"><a href="bilder_carusel.html">City photos taken with a mobile phone.</a></span>
+          </li>
+        </ul>
+      </details>
+      
+      <!-- PLAKATER -->
+      <details class="project-menu">
+        <summary><span class="lang-no">Plakater</span> <span class="lang-en" style="display:none;">Posters</span></summary>
+        <ul>
+          <li><span class="lang-no"><a href="bilder/plakater/Ted.png" target="_blank">Ted plakat</a></span> <span class="lang-en"><a href="Bilder/Plakater/Ted.png" target="_blank">Ted poster</a></span></li>
+        </ul>
+      </details>
+      
+      <!-- Digitale bilder -->
+      <details class="project-menu">
+        <summary><span class="lang-no">Digitale Bilder</span> <span class="lang-en" style="display:none;">Digital Photos</span></summary>
+        <ul>
+          <li><a href="#">Placeholder</a></li>
+        </ul>
+      </details>
+      
+      <!-- FILM & VIDEO -->
+      <details class="project-menu">
+        <summary><span class="lang-no">Film & Video</span> <span class="lang-en" style="display:none;">Film & Video</span></summary>
+        <ul>
+          <li><a href="#">Placeholder</a></li>
+        </ul>
+      </details>
+      
+      <!-- TEKNOLOGIFORSTÅELSE -->
+      <details class="project-menu">
+        <summary><span class="lang-no">Teknologiforståelse</span> <span class="lang-en" style="display:none;">Technology</span></summary>
+        <ul>
+          <li><a href="#">Placeholder</a></li>
+        </ul>
+      </details>
+      
+      <!-- PROGRAMMERING -->
+      <details class="project-menu">
+        <summary><span class="lang-no">Programmering</span> <span class="lang-en" style="display:none;">Programming</span></summary>
+        <ul>
+          <li><a href="#">Placeholder</a></li>
+        </ul>
+      </details>
+      
+      <!-- KONSEPTUTVIKLING -->
+      <details class="project-menu">
+        <summary><span class="lang-no">Konseptutvikling</span> <span class="lang-en" style="display:none;">Concept Development</span></summary>
+        <ul>
+          <li><a href="#">Placeholder</a></li>
+        </ul>
+      </details>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container small">
+      <p><span class="lang-no">Laget av </span> <span class="lang-en" style="display:none;">Made by </span><i>Magnus Andreassen</i> © <span id="year"></span></p>
+    </div>
+  </footer>
+  <script src="script/script.js"></script>
+</body>
+</html>

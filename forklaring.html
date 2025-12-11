@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF-visning</title>
+
+  <!-- Beholder eksisterende stil -->
+  <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="icon" href="./Bilder/Logo/Logo.svg">
+  
+  <style>
+    /* Plass til PDF-rammen */
+    .pdf-wrapper {
+      margin-top: 2rem;
+      height: calc(100vh - 240px);
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    }
+
+    /* Sentral dropdown */
+    .pdf-select-box {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .pdf-select {
+      padding: 12px 18px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="home-page">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Min portefølje</a>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+
+      <nav id="siteNav" class="site-nav">
+        <ul>
+          <li><a href="om-meg.html">Om meg</a></li>
+          <li><a href="bilder.html">Bilder</a></li>
+          <li><a href="prosjekter-tema.html">Prosjekter</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="pdf-visning.html" class="active">PDF</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- INNHOLD -->
+  <main class="container">
+
+    <section class="hero">
+      <h1>PDF-visning</h1>
+
+      <div class="hero-textbox">
+        <p>Velg et dokument fra listen under for å vise det i full høyde.</p>
+      </div>
+    </section>
+
+    <!-- DROPDOWN (10 valg maks) -->
+    <div class="pdf-select-box">
+      <select id="pdfSelector" class="pdf-select">
+        <option value="">Velg PDF-dokument…</option>
+
+        <option value="valg1">Valg 1</option>
+        <option value="valg2">Valg 2</option>
+        <option value="valg3">Valg 3</option>
+        <option value="valg4">Valg 4</option>
+        <option value="valg5">Valg 5</option>
+        <option value="valg6">Valg 6</option>
+        <option value="valg7">Valg 7</option>
+        <option value="valg8">Valg 8</option>
+        <option value="valg9">Valg 9</option>
+        <option value="valg10">Valg 10</option>
+      </select>
+    </div>
+
+    <!-- PDF-RAMME -->
+    <section class="pdf-wrapper">
+      <iframe class="pdf-frame" src="">
+        PDF kan ikke vises. <a href="#">Last ned her</a>.
+      </iframe>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container small">
+      <p>Laget av <i>Gunnar Knutsen</i> © <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Oppdater årstall i footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Håndter valg av PDF
+    document.getElementById("pdfSelector").addEventListener("change", function () {
+      const navn = this.value;
+
+      if (!navn) return;
+
+      const sti = `pdf/${navn}.pdf`;
+
+      document.querySelector(".pdf-frame").src = sti;
+    });
+  </script>
+
+</body>
+</html>

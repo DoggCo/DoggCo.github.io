@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bildegalleri</title>
+  <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="icon" type="image/svg+xml" href="./bilder/logo/favicon.svg">
+</head>
+<body class="bilder-ny-page">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Magnus A</a>
+      <button class="nav-toggle" id="navToggle">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <ul>
+          <li><a href="om-meg.html"> <span class="lang-no">Om meg</span> <span class="lang-en" style="display:none;">About me</span></a></li>
+          <li><a href="bilder_carusel.html#" class="active"> <span class="lang-no">Bilder</span> <span class="lang-en" style="display:none;">Pictures</span></a></li>
+          <li><a href="prosjekter.html"> <span class="lang-no">Prosjekter</span> <span class="lang-en" style="display:none;">Projects</span></a></li>
+          <li><a href="kontakt.html"> <span class="lang-no">Kontakt</span> <span class="lang-en" style="display:none;">Contact</span></a></li>
+          <li><a href="sosiale.html"> <span class="lang-no">Lenker</span> <span class="lang-en" style="display:none;">Links</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="TranslateAlign">
+        <button id="translateBtn">English</button>
+        </div>
+  </header>
+
+<main class="container">
+
+    <div class="gallery-wrapper">
+
+        <h1 class="page-title"> <span class="lang-no">Bildegalleri</span> <span class="lang-en" style="display:none;">Picture Gallery</span></h1>
+          <p>
+            <span class="lang-no">Noen bilder tatt med telefon som medie prosjekt.</span>
+            <span class="lang-en" style="display:none;">Some photos taken with a phone as a media project.</span>
+          </p>
+        <!-- Horisontalt galleri -->
+        <div class="carousel" id="carousel">
+            <img src="bilder/ute/church.jpg" alt="Bilde 1" class="carousel-item">
+            <img src="bilder/ute/fountain.jpg" alt="Bilde 2" class="carousel-item">
+            <img src="bilder/ute/juletre.jpg" alt="Bilde 3" class="carousel-item">
+            <img src="bilder/ute/mountain.jpg" alt="Bilde 1 igjen" class="carousel-item">
+            <img src="bilder/ute/tree.jpg" alt="Bilde 1 igjen" class="carousel-item">
+            <img src="bilder/ute/water.jpg" alt="Bilde 1 igjen" class="carousel-item">
+        </div>
+
+        <!-- Slider kontroller -->
+        <input type="range" min="0" max="100" value="0"
+               class="carousel-slider" id="carouselSlider">
+
+    </div>
+
+</main>
+
+
+  <!-- Popup-visning -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightboxImg" src="" alt="Forstørret bilde">
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span class="lang-no">Laget av </span> <span class="lang-en" style="display:none;">Made by </span><i>Magnus Andreassen</i> © <span id="year"></span></p>
+    </div>
+  </footer>
+
+<script src="script/script.js"></script>
+</body>
+</html>

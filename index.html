@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnus A</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="icon" type="image/svg+xml" href="./bilder/logo/favicon.svg">
+</head>
+<body class="home-page" >
+    <!-- Topptekst -->
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html#">Magnus A</a>
+            
+            <!-- Hamburger-knapp -->
+            <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Åpne meny">☰</button>
+            
+            
+            <!-- Navigasjon -->
+            <nav id="siteNav" class ="site-nav" role="navigation">
+                <ul>
+                    <li><a href="om-meg.html"> <span class="lang-no">Om meg</span> <span class="lang-en" style="display:none;">About me</span></a></li>
+                    <li><a href="bilder_carusel.html"> <span class="lang-no">Bilder</span> <span class="lang-en" style="display:none;">Pictures</span></a></li>
+                    <li><a href="prosjekter.html"> <span class="lang-no">Prosjekter</span> <span class="lang-en" style="display:none;">Projects</span></a></li>
+                    <li><a href="kontakt.html"> <span class="lang-no">Kontakt</span> <span class="lang-en" style="display:none;">Contact</span></a></li>
+                    <li><a href="sosiale.html"> <span class="lang-no">Lenker</span> <span class="lang-en" style="display:none;">Links</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="TranslateAlign">
+        <button id="translateBtn">English</button>
+        </div>
+    </header>
+    <!-- Hovedinnhold -->
+    <main class="container">
+        <section class="hero">
+            <h1 id="BigWelcome"><span class="lang-no">Velkommen!</span> <span class="lang-en" style="display:none;">Welcome!</span></h1>
+                <p><span class="lang-no">Dette er portefølje for <em>Magnus A</em> som YFF prosjekt for VG1 IM. Jeg kommer til å velge IT på VG2, og da fortsette med dette, med fokus på software og digitale verktøy.</span> <span class="lang-en" style="display:none;">This is a portfolio for <em>Magnus A</em> as a "YFF" project for VG1 IM. I'm going to be choosing IT in VG2, and continuing with this, with a focus on software and digital tools.</span> </p>
+                <p><span class="lang-no">Jeg lærer om C++, HTML, CSS, Javascript og ulike andre språk, sammen med andre medieprogrammer some Adobe-pakken. Se på mine <a href="prosjekter.html">prosjekter</a> for å se hva jeg kan! Jeg har stor ønske for å bli god i programmering, for å lage effektiv software. Jeg er også interessert i hardware og hvordan det virker i sammenheng med alt annet. Vil du vite mer om meg? Sjekk ut <a href="om-meg.html">om meg.</a></span> <span class="lang-en" style="display:none;">I'm learning about C++, HTML, CSS, Javascript and other different languages, along with other media programs such as the Adobe-pack. Look at my <a href="prosjekter.html">projects</a> to see what I can do! I want to become decent at programming, to make effective software. I'm also interested in hardware and how it works in relation to everything else. Want to know more about me? Check out my <a href="om-meg.html">about me.</a></span></p>
+                <div>
+                <h2>
+                    <span class="lang-no">Denne nettsiden</span>
+                    <span class="lang-en" style="display:none;">This website</span>
+                </h2>
+                <p>
+                    <span class="lang-no">Hvorfor? Denne nettsiden er laget som en YFF prosjekt som jeg kan bruke some en portfolje for hva som helst. Her kan jeg lagre min prosjekter på et sikkert sted (En GIT repo) og vise fram det jeg kan.</span>
+                    <span class="lang-en" style="display:none;">Why? This website is made as a "YFF" project as I can use as a portfolio for whatever I want. I can save my projects here in a safe place (A GIT repo) and show off what I can do.</span>
+                </p>
+                </div>
+                <a class="button" href="prosjekter.html"> <span class="lang-no">Mine prosjekter</span> <span class="lang-en" style="display:none;">My projects</span></a>
+        </section>
+        
+        <section id="prosjekter" class="project-feature small">
+            <div class="project-inner small">
+                <img src="bilder/logo/favicon.svg" alt="Prosjektlogo" class="project-logo small">
+                <h2><span class="lang-no">Hm</span> <span class="lang-en" style="display:none">Hm</span></h2>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bunntekst -->
+    <footer class="site-footer">
+        <div class="container small">
+            <p><span class="lang-no">Laget av </span> <span class="lang-en" style="display:none;">Made by </span><i>Magnus Andreassen</i> © <span id="year"></span></p>
+        </div>
+    </footer>
+    
+    <script src="script/script.js"></script>
+</body>
+</html>

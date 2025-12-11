@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="icon" type="image/svg+xml" href="./bilder/logo/favicon.svg">
+</head>
+
+<body class="contact-page">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Magnus A</a>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Åpne meny">☰</button>
+      <nav id="siteNav" class="site-nav" role="navigation">
+        <ul>
+          <li><a href="om-meg.html"> <span class="lang-no">Om meg</span> <span class="lang-en" style="display:none;">About me</span></a></li>
+          <li><a href="bilder_carusel.html"> <span class="lang-no">Bilder</span> <span class="lang-en" style="display:none;">Pictures</span></a></li>
+          <li><a href="prosjekter.html"> <span class="lang-no">Prosjekter</span> <span class="lang-en" style="display:none;">Projects</span></a></li>
+          <li><a href="kontakt.html#" class="active"> <span class="lang-no">Kontakt</span> <span class="lang-en" style="display:none;">Contact</span></a></li>
+          <li><a href="sosiale.html"> <span class="lang-no">Lenker</span> <span class="lang-en" style="display:none;">Links</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="TranslateAlign">
+        <button id="translateBtn">English</button>
+        </div>
+  </header>
+  
+  <main class="container">
+    <h1><span class="lang-no">Kontakt meg</span> <span class="lang-en" style="display:none;">Contact me</span></h1>
+    
+    <!-- BRED KONTAKTBOKS -->
+    <div class="contact-card">
+      <form class="form" action="https://formsubmit.co/magnusandreassen21@gmail.com" method="POST">
+        <label for="email"><span class="lang-no">E-post</span> <span class="lang-en" style="display:none;">E-mail</span></label>
+        <input id="email" name="email" type="email" placeholder="din@epost.no" data-placeholder-no="din@epost.no" data-placeholder-en="your@email.com" required>
+        
+        <label for="navn"><span class="lang-no">Navn</span> <span class="lang-en" style="display:none;">Name</span></label>
+        <input id="navn" name="navn" type="text" placeholder="Ditt navn" data-placeholder-no="Ditt navn" data-placeholder-en="Your name"" required>
+        
+        <label for="melding"><span class="lang-no">Melding</span> <span class="lang-en" style="display:none;">Message</span></label>
+        <textarea id="melding" name="melding" rows="6" placeholder="Skriv en kort melding…" data-placeholder-no="Skriv en kort melding…" data-placeholder-en="Write a short message…"></textarea>
+        
+        <!-- Anti-spam & omdirigering -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Ny melding fra porteføljen">
+        <input type="hidden" name="_next" value="index.html">
+        
+        <button type="submit" class="button">Send</button>
+      </form>
+    </div>
+    
+    <p class="small"> <span class="lang-no">Eller send e-post manuelt: </span> <span class="lang-en"> Or write an e-mail manually: </span>
+      <a href="mailto:magnusandreassen21@gmail.com">magnusandreassen21@gmail.com</a>
+    </p>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container small">
+      <p><span class="lang-no">Laget av </span> <span class="lang-en" style="display:none;">Made by </span><i>Magnus Andreassen</i> © <span id="year"></span></p>
+    </div>
+  </footer>
+  
+<script defer src="script/script.js"></script>
+</body>
+</html>

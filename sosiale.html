@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenker</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="icon" type="image/svg+xml" href="./bilder/logo/favicon.svg">
+</head>
+<body class="home-page">
+    <!-- Topptekst -->
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">Magnus A</a>
+            
+            <!-- Hamburger-knapp -->
+            <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Åpne meny">☰</button>
+            
+            <!-- Navigasjon -->
+            <nav id="siteNav" class ="site-nav" role="navigation">
+                <ul>
+                  <li><a href="om-meg.html"> <span class="lang-no">Om meg</span> <span class="lang-en" style="display:none;">About me</span></a></li>
+                  <li><a href="bilder_carusel.html"> <span class="lang-no">Bilder</span> <span class="lang-en" style="display:none;">Pictures</span></a></li>
+                  <li><a href="prosjekter.html"> <span class="lang-no">Prosjekter</span> <span class="lang-en" style="display:none;">Projects</span></a></li>
+                  <li><a href="kontakt.html"> <span class="lang-no">Kontakt</span> <span class="lang-en" style="display:none;">Contact</span></a></li>
+                  <li><a href="sosiale.html#" class="active"> <span class="lang-no">Lenker</span> <span class="lang-en" style="display:none;">Links</span></a></li>
+                </ul>
+            </nav>
+        </div>  
+        <div id="TranslateAlign">
+        <button id="translateBtn">English</button>
+        </div>
+    </header>
+    <h1 class="page-title"><span class="lang-no">Lenker</span> <span class="lang-en" style="display:none;">Links</span></h1>
+    <section class="social-links">
+        <div class="container">
+            <div class="social-button-wrapper">
+                <a href="https://www.youtube.com/@FallenDog" class="social-button" aria-label="Youtube" target="_blank">
+                    <img src="./bilder/logo/YoutubeLogo.webp" alt="Youtube logo">
+                </a>
+                <span class="social-text">Youtube</span>
+            </div>
+            <div class="social-button-wrapper">
+                <a href="https://github.com/DoggCo" class="social-button" aria-label="GitHub" target="_blank">
+                    <img src="./bilder/logo/github-mark.svg" alt="GitHub logo">
+                </a>
+                <span class="social-text">GitHub</span>
+            </div>
+            <div class="social-button-wrapper">
+                <a href="https://steamcommunity.com/id/FallenDogIsRum" class="social-button" aria-label="GitHub" target="_blank">
+                    <img src="./bilder/logo/steam.svg" alt="Steam logo">
+                </a>
+                <span class="social-text">Steam</span>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer class="site-footer">
+        <div class="container small">
+            <p><span class="lang-no">Laget av </span> <span class="lang-en" style="display:none;">Made by </span><i>Magnus Andreassen</i> © <span id="year"></span></p>
+        </div>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>
