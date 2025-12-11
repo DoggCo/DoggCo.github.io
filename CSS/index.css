@@ -124,7 +124,9 @@ body.projects-page {
 .hero a:visited {
         color: var(--text);
 }
-
+.hero a {
+    color:var(--text);
+}
 .hero h1 {
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
