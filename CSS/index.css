@@ -28,9 +28,6 @@ body.projects-page {
     display: flex;
     flex-direction: column;
 }
-.lang-no, .lang-en {
-  display: contents;
-}
 .container {
     max-width: 1100px;
     margin: 0 auto;
